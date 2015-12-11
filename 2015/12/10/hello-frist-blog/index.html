@@ -213,6 +213,16 @@
       
     
     <div class="article-entry" itemprop="articleBody">
+    
+      
+          
+          <p>摸索了一天一夜了，终于搞定了 mac + github + hexo。</p>
+<a id="more"></a>
+<p>看到页面的成果，心里很是激动啊。在wordpress 的 DNS 设置上走了弯路。GitHub 上 repository的时候也反复了好几遍。现在的问题是，每次 <code>hexo deploy</code> 的时候，总要上传一次 CNAME。希望尽快找到解决方法。</p>
+<p><em>解决方法</em><br>在电脑上的hexo所建立的网站路径下有个source文件夹，就把CNAME放在这里就可以了。每次 <code>hexo generate</code>时，会把CNAME拷贝到<code>./punlic</code>文件夹下。而每次<code>hexo deploy</code>时，又会把<code>./public</code>文件夹下的内容同步到github中。</p>
+
+      
+    
       
           
         <p>摸索了一天一夜了，终于搞定了 mac + github + hexo。</p>
