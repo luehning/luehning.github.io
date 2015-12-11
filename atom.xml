@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[luehning's blog]]></title>
+  <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://luehningeek.com/index/"/>
+  <updated>2015-12-10T16:14:59.000Z</updated>
+  <id>http://luehningeek.com/index/</id>
+  
+  <author>
+    <name><![CDATA[luehning]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[aboutme]]></title>
+    <link href="http://luehningeek.com/index/2015/12/11/aboutme/"/>
+    <id>http://luehningeek.com/index/2015/12/11/aboutme/</id>
+    <published>2015-12-10T16:14:59.000Z</published>
+    <updated>2015-12-10T16:14:59.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo 使用指南 markdown 方法]]></title>
+    <link href="http://luehningeek.com/index/2015/12/11/hello-world/"/>
+    <id>http://luehningeek.com/index/2015/12/11/hello-world/</id>
+    <published>2015-12-10T16:09:42.000Z</published>
+    <updated>2015-12-10T16:09:42.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>]]>
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://luehningeek.com/index/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="编程" scheme="http://luehningeek.com/index/categories/programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[搞定了hexo]]></title>
+    <link href="http://luehningeek.com/index/2015/12/10/hello-frist-blog/"/>
+    <id>http://luehningeek.com/index/2015/12/10/hello-frist-blog/</id>
+    <published>2015-12-09T15:09:31.000Z</published>
+    <updated>2015-12-11T03:46:25.000Z</updated>
+    <content type="html"><![CDATA[<p>摸索了一天一夜了，终于搞定了 mac + github + hexo。</p>
+<a id="more"></a>
+<p>看到页面的成果，心里很是激动啊。在wordpress 的 DNS 设置上走了弯路。GitHub 上 repository的时候也反复了好几遍。现在的问题是，每次 <code>hexo deploy</code> 的时候，总要上传一次 CNAME。希望尽快找到解决方法。</p>
+<p><em>解决方法</em><br>在电脑上的hexo所建立的网站路径下有个source文件夹，就把CNAME放在这里就可以了。每次 <code>hexo generate</code>时，会把CNAME拷贝到<code>./punlic</code>文件夹下。而每次<code>hexo deploy</code>时，又会把<code>./public</code>文件夹下的内容同步到github中。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>摸索了一天一夜了，终于搞定了 mac + github + hexo。</p>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://luehningeek.com/index/tags/hexo/"/>
+    
+      <category term="随笔" scheme="http://luehningeek.com/index/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="编程" scheme="http://luehningeek.com/index/categories/programming/"/>
+    
+  </entry>
+  
+</feed>
