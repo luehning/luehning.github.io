@@ -4,7 +4,7 @@
   <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luehningeek.com/index/"/>
-  <updated>2015-12-10T16:14:59.000Z</updated>
+  <updated>2015-12-12T13:50:09.000Z</updated>
   <id>http://luehningeek.com/index/</id>
   
   <author>
@@ -13,6 +13,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[qria]]></title>
+    <link href="http://luehningeek.com/index/2015/12/12/qria/"/>
+    <id>http://luehningeek.com/index/2015/12/12/qria/</id>
+    <published>2015-12-12T13:36:51.000Z</published>
+    <updated>2015-12-12T13:50:09.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>QRIA 简介</strong>  </p>
+<embed src="http://player.youku.com/player.php/sid/XMTQxMTE3NDAyNA==/v.swf" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>QRIA 简介</strong>  </p>
+<embed src="http://player.youku.com/player.php/sid/XMTQxMTE3NDAyNA==/v.swf" allowfullscreen="true" quality]]>
+    </summary>
+    
+      <category term="qria" scheme="http://luehningeek.com/index/tags/qria/"/>
+    
+      <category term="广而告之" scheme="http://luehningeek.com/index/tags/%E5%B9%BF%E8%80%8C%E5%91%8A%E4%B9%8B/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[aboutme]]></title>
