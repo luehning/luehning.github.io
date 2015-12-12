@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /archives
+
+Crawl-delay: 60
+Disallow: /tags/
+Sitemap: http://luehningeek.com/sitemap.xml
