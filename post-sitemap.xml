@@ -7,8 +7,24 @@
     </url>
 
     <url>
+        <loc>http://luehningeek.com/index/2015/12/12/qria/</loc>
+        <lastmod>2015-12-12T15:36:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://luehningeek.com/index/2015/12/13/hello-world/</loc>
+        <lastmod>2015-12-12T15:30:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://luehningeek.com/index/2015/12/10/hello-frist-blog/</loc>
-        <lastmod>2015-12-12T15:14:08.000Z</lastmod>
+        <lastmod>2015-12-12T15:19:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,22 +33,6 @@
     <url>
         <loc>http://luehningeek.com/index/2015/12/11/aboutme/</loc>
         <lastmod>2015-12-12T14:53:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://luehningeek.com/index/2015/12/12/qria/</loc>
-        <lastmod>2015-12-12T14:49:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://luehningeek.com/index/2015/12/11/hello-world/</loc>
-        <lastmod>2015-12-10T16:09:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
