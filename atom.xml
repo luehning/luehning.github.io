@@ -4,7 +4,7 @@
   <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luehningeek.com/index/"/>
-  <updated>2015-12-12T13:50:09.000Z</updated>
+  <updated>2015-12-12T14:49:06.000Z</updated>
   <id>http://luehningeek.com/index/</id>
   
   <author>
@@ -15,31 +15,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[qria]]></title>
+    <title><![CDATA[酷利亚 韩国儿童抗菌保鲜袋的领跑企业]]></title>
     <link href="http://luehningeek.com/index/2015/12/12/qria/"/>
     <id>http://luehningeek.com/index/2015/12/12/qria/</id>
     <published>2015-12-12T13:36:51.000Z</published>
-    <updated>2015-12-12T13:50:09.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>QRIA 简介</strong>  </p>
+    <updated>2015-12-12T14:49:06.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>酷利亚 韩国儿童抗菌保鲜袋的领跑企业</strong>  </p>
+<p>酷利亚儿童抗菌保鲜袋 是韩国QRIA公司生产的，为儿童食物保管提供安全可靠的解决方案的一款产品。该公司致力于解决妈妈们在食物携带和存储时的忧虑；为妈妈们提供方便，也为您的孩子提供最好的呵护。酷利亚抗菌保鲜袋也可用于户外运动和极限运动的食物长时间储藏。  </p>
+<p>下面是 酷利亚儿童抗菌保鲜袋在韩国的广告视频，添加了中文字幕。</p>
 <embed src="http://player.youku.com/player.php/sid/XMTQxMTE3NDAyNA==/v.swf" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><strong>QRIA 简介</strong>  </p>
-<embed src="http://player.youku.com/player.php/sid/XMTQxMTE3NDAyNA==/v.swf" allowfullscreen="true" quality]]>
+    <![CDATA[<p><strong>酷利亚 韩国儿童抗菌保鲜袋的领跑企业</strong>  </p>
+<p>酷利亚儿童抗菌保鲜袋 是韩国QRIA公司生产的，为儿童食物保管提供安全可靠的解决方案的一款产品。该公司致力于解决妈妈们在食物携带和存储时的忧虑；为妈妈们提供方便，也为您的孩子提供最好的]]>
     </summary>
     
-      <category term="qria" scheme="http://luehningeek.com/index/tags/qria/"/>
+      <category term="儿童保鲜袋" scheme="http://luehningeek.com/index/tags/%E5%84%BF%E7%AB%A5%E4%BF%9D%E9%B2%9C%E8%A2%8B/"/>
     
       <category term="广而告之" scheme="http://luehningeek.com/index/tags/%E5%B9%BF%E8%80%8C%E5%91%8A%E4%B9%8B/"/>
+    
+      <category term="酷利亚" scheme="http://luehningeek.com/index/tags/%E9%85%B7%E5%88%A9%E4%BA%9A/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[aboutme]]></title>
+    <title><![CDATA[构思中]]></title>
     <link href="http://luehningeek.com/index/2015/12/11/aboutme/"/>
     <id>http://luehningeek.com/index/2015/12/11/aboutme/</id>
     <published>2015-12-10T16:14:59.000Z</published>
-    <updated>2015-12-10T16:14:59.000Z</updated>
+    <updated>2015-12-12T14:53:09.000Z</updated>
     <content type="html"></content>
     <summary type="html">
     
@@ -80,7 +84,7 @@
     <link href="http://luehningeek.com/index/2015/12/10/hello-frist-blog/"/>
     <id>http://luehningeek.com/index/2015/12/10/hello-frist-blog/</id>
     <published>2015-12-09T15:09:31.000Z</published>
-    <updated>2015-12-12T13:05:33.000Z</updated>
+    <updated>2015-12-12T14:43:16.000Z</updated>
     <content type="html"><![CDATA[<p>摸索了一天一夜了，终于搞定了 mac + github + hexo。</p>
 <a id="more"></a>
 <p><strong>搭建hexo博客之前 你应该具备什么？</strong><br>你需要一颗好奇的新，肯花时间就行。博主就是零基础，什么node.js，之前就没听过。所以零基础的你一定可以的。  </p>
@@ -89,6 +93,7 @@
 <p>2.下面是可以一路点击下一步的教程推荐：<br><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a><br><a href="http://godera.org/2015/03/16/Mac下程序员博客之Hexo-GitHub-Pages-GitCafe-Pages-DNSPod/" target="_blank" rel="external">Mac下程序员博客之 Hexo + GitHub Pages + GitCafe Pages + DNSPod</a><br><a href="http://zjubank.com/2015/12/01/hexo-blog/" target="_blank" rel="external">Hexo搭建，Wordpress迁移和Github部署</a><br>3.如果你也喜欢hexo的 gilia 和 gelee 主题，请一定要看看下面这些：<br><a href="http://littledogboy.com/2015/10/08/Hexo教程(一" target="_blank" rel="external">Shumin Wu</a>——搭建各人博客/)<br><a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">MOxFIVE GitHub</a>  </p>
 <p><strong>什么是hexo</strong><br>出自tommy351之手，hexo是一个基于Node.js的静态博客程序，其编译速度之快，让我很是惊讶。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br>之前弄过Wordpress,最初的想法是用它来学习HTML，就注册了域名，还花了几十块钱。结果，一点html也没有用到。结果就不了了之，几十块钱也打水漂了。是不是我太傻不会弄啊？<br>后来看到了hexo，又激起了我当初的那个做博客的梦，毕竟几十块钱不能白花啊。<br>下面总结建站过程中的一些总结。也当是笔记了，以后找起来也方便。</p>
 <p><em>关于 CNAME</em><br>在电脑上的hexo所建立的网站路径下有个source文件夹，就把CNAME放在这里就可以了。每次 <code>hexo generate</code>时，会把CNAME拷贝到<code>./punlic</code>文件夹下。而每次<code>hexo deploy</code>时，又会把<code>./public</code>文件夹下的内容同步到github中。</p>
+<p><em>关于 插入优酷视频</em><br>打开想链接的优酷上的视频，点击视频下面的分享，会有html链接。<br><code>&lt;embed src=&quot;http://player.youku.com/player.php/... &gt;&lt;/embed&gt;</code><br>把这个链接直接复制到<code>.md</code> 文件中即可。亲测。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>摸索了一天一夜了，终于搞定了 mac + github + hexo。</p>]]>
