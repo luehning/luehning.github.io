@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[luehning's blog]]></title>
+  <title><![CDATA[吕宁的博客]]></title>
   <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luehningeek.com/index/"/>
@@ -8,7 +8,7 @@
   <id>http://luehningeek.com/index/</id>
   
   <author>
-    <name><![CDATA[luehning]]></name>
+    <name><![CDATA[吕宁]]></name>
     
   </author>
   
