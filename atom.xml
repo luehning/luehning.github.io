@@ -4,7 +4,7 @@
   <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luehningeek.com/index/"/>
-  <updated>2015-12-13T02:43:10.000Z</updated>
+  <updated>2015-12-13T07:22:04.000Z</updated>
   <id>http://luehningeek.com/index/</id>
   
   <author>
@@ -18,11 +18,18 @@
     <title><![CDATA[hexo 使用指南 markdown 方法]]></title>
     <link href="http://luehningeek.com/index/2015/12/13/hello-world/"/>
     <id>http://luehningeek.com/index/2015/12/13/hello-world/</id>
-    <published>2015-12-13T02:43:10.000Z</published>
-    <updated>2015-12-13T02:43:10.000Z</updated>
+    <published>2015-12-13T07:22:04.000Z</published>
+    <updated>2015-12-13T07:22:04.000Z</updated>
     <content type="html"><![CDATA[<p>markdown语法很简洁明了。接下来的时间就是总结markdown啦。</p>
 <a id="more"></a>
-<h1 id="u8FD9_u662F_u4E00_u7EA7_u76EE_u5F55"><a href="#u8FD9_u662F_u4E00_u7EA7_u76EE_u5F55" class="headerlink" title="这是一级目录"></a>这是一级目录</h1><h2 id="u8FD9_u662F_u4E8C_u7EA7_u76EE_u5F55"><a href="#u8FD9_u662F_u4E8C_u7EA7_u76EE_u5F55" class="headerlink" title="这是二级目录"></a>这是二级目录</h2><h3 id="u8FD9_u662F_u4E09_u7EA7_u76EE_u5F55"><a href="#u8FD9_u662F_u4E09_u7EA7_u76EE_u5F55" class="headerlink" title="这是三级目录"></a>这是三级目录</h3><p>你看到的<code>#</code>是写在目录前面的，<code>#</code>的个数代表基数。有些博客主题会自动生成文章目录，前提是你要在文章的目录上标上<code>#</code>符号。如果你用恰巧也用macdown写博文的话，可以把光标移到你认为合适的地方，按住<code>command + 1</code>到 <code>command + 6</code>,分别对应了一到六级目录。  </p>
+<h2 id="u535A_u6587_u4E2D_u6DFB_u52A0_u76EE_u5F55"><a href="#u535A_u6587_u4E2D_u6DFB_u52A0_u76EE_u5F55" class="headerlink" title="博文中添加目录"></a>博文中添加目录</h2><p><code># 这是一级目录</code><br><code>## 这是二级目录</code><br><code>### 这是三级目录</code></p>
+<p>&emsp;&emsp;有些博客主题会自动生成文章目录，前提是你要在文章的目录上标上<code>#</code>符号。你看到的<code>#</code>是写在目录前面的，<code>#</code>的个数代表目录的等级数。如果你用恰巧也用macdown写博文的话，可以把光标移到你认为合适的地方，按住<code>command + 1</code>到 <code>command + 6</code>,分别对应了一到六级目录。  </p>
+<h2 id="u663E_u793A_u6548_u679C_uFF1A"><a href="#u663E_u793A_u6548_u679C_uFF1A" class="headerlink" title="  显示效果：  "></a>  显示效果：  </h2><h1 id="u8FD9_u662F_u4E00_u7EA7_u76EE_u5F55"><a href="#u8FD9_u662F_u4E00_u7EA7_u76EE_u5F55" class="headerlink" title="这是一级目录"></a>这是一级目录</h1><p>二级目录内容</p>
+<h2 id="u8FD9_u662F_u4E8C_u7EA7_u76EE_u5F55"><a href="#u8FD9_u662F_u4E8C_u7EA7_u76EE_u5F55" class="headerlink" title="这是二级目录"></a>这是二级目录</h2><p>二级目录内容</p>
+<h3 id="u8FD9_u662F_u4E09_u7EA7_u76EE_u5F55"><a href="#u8FD9_u662F_u4E09_u7EA7_u76EE_u5F55" class="headerlink" title="这是三级目录"></a>这是三级目录</h3><p>三级目录内容</p>
+<h4 id="u56DB_u7EA7_u76EE_u5F55"><a href="#u56DB_u7EA7_u76EE_u5F55" class="headerlink" title="四级目录"></a>四级目录</h4><p>四级目录内容</p>
+<h5 id="u4E94_u7EA7_u76EE_u5F55"><a href="#u4E94_u7EA7_u76EE_u5F55" class="headerlink" title="五级目录"></a>五级目录</h5><p>五级目录内容</p>
+<h6 id="u516D_u7EA7_u76EE_u5F55"><a href="#u516D_u7EA7_u76EE_u5F55" class="headerlink" title="六级目录"></a>六级目录</h6><h2 id="u516D_u7EA7_u76EE_u5F55_u5185_u5BB9"><a href="#u516D_u7EA7_u76EE_u5F55_u5185_u5BB9" class="headerlink" title="六级目录内容"></a>六级目录内容</h2><h2 id="u9996_u884C_u7F29_u8FDB"><a href="#u9996_u884C_u7F29_u8FDB" class="headerlink" title="首行缩进"></a>首行缩进</h2><p><code>&amp;emsp;&amp;emsp;</code><br>&emsp;&emsp;如果博文是中文的，最好还是做 首行的缩进，这样才不会对阅读带来视觉的压迫感。在段落首字母前加入</p>
 <p><code>构思中。。。</code></p>
 ]]></content>
     <summary type="html">
@@ -77,31 +84,31 @@
   </entry>
   
   <entry>
-    <title><![CDATA[hexo 总结]]></title>
+    <title><![CDATA[hexo 博客搭建]]></title>
     <link href="http://luehningeek.com/index/2015/12/10/hello-frist-blog/"/>
     <id>http://luehningeek.com/index/2015/12/10/hello-frist-blog/</id>
     <published>2015-12-09T15:09:31.000Z</published>
-    <updated>2015-12-12T15:19:40.000Z</updated>
-    <content type="html"><![CDATA[<p>摸索了两天一夜了，终于搞定了 mac + github + hexo。。。我想说hexo很值得做。markdown语法也很有意思，一定要get。</p>
-<h1 id="u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F"><a href="#u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F" class="headerlink" title="<strong>搭建hexo博客之前 你应该具备什么？</strong>"></a><strong>搭建hexo博客之前 你应该具备什么？</strong></h1><p>你需要一颗好奇的新，肯花时间就行。博主就是零基础，什么node.js，之前就没听过。所以零基础的你一定可以的。  </p>
-<h2 id="u9700_u8981_u7684_u5DE5_u5177"><a href="#u9700_u8981_u7684_u5DE5_u5177" class="headerlink" title="<strong>需要的工具</strong>"></a><strong>需要的工具</strong></h2><p>一台mac,一个github账户<br><a id="more"></a></p>
+    <updated>2015-12-13T06:55:08.000Z</updated>
+    <content type="html"><![CDATA[<p>摸索了两天一夜了，终于搞定了 mac + github + hexo。。。我想说hexo很值得做。markdown语法也很有意思，一定要get。  </p>
+<h1 id="u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F"><a href="#u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F" class="headerlink" title="<strong>搭建hexo博客之前 你应该具备什么？</strong>"></a><strong>搭建hexo博客之前 你应该具备什么？</strong></h1><p>&emsp;&emsp;你需要一颗好奇的新，肯花时间就行。博主就是零基础，什么node.js，之前就没听过。所以零基础的你一定可以的。  </p>
+<h2 id="u9700_u8981_u7684_u5DE5_u5177"><a href="#u9700_u8981_u7684_u5DE5_u5177" class="headerlink" title="<strong>需要的工具</strong>"></a><strong>需要的工具</strong></h2><p>&emsp;&emsp;一台mac,一个github账户<br><a id="more"></a></p>
 <h2 id="u6559_u7A0B__u94FE_u63A5"><a href="#u6559_u7A0B__u94FE_u63A5" class="headerlink" title="<strong>教程 链接</strong>"></a><strong>教程 链接</strong></h2><p>具体的教程就不发了。但是这里有你在建hexo站点时，可能需要的教程链接  </p>
-<h3 id="1-_u770B_u5B8C_u4E86_u4E0A_u9762_u8FD9_u4E2A_u5B98_u7F51_u6559_u7A0B_uFF0C_u57FA_u672C_u4E0A_u90FD_u4F1A_u4E86_u3002"><a href="#1-_u770B_u5B8C_u4E86_u4E0A_u9762_u8FD9_u4E2A_u5B98_u7F51_u6559_u7A0B_uFF0C_u57FA_u672C_u4E0A_u90FD_u4F1A_u4E86_u3002" class="headerlink" title="1.看完了上面这个官网教程，基本上都会了。"></a>1.看完了上面这个官网教程，基本上都会了。</h3><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo 官网地址</a>   </p>
-<h3 id="2-_u4E0B_u9762_u662F_u53EF_u4EE5_u4E00_u8DEF_u70B9_u51FB_u4E0B_u4E00_u6B65_u7684_u6559_u7A0B_u63A8_u8350_uFF1A"><a href="#2-_u4E0B_u9762_u662F_u53EF_u4EE5_u4E00_u8DEF_u70B9_u51FB_u4E0B_u4E00_u6B65_u7684_u6559_u7A0B_u63A8_u8350_uFF1A" class="headerlink" title="2.下面是可以一路点击下一步的教程推荐："></a>2.下面是可以一路点击下一步的教程推荐：</h3><p><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a><br><a href="http://godera.org/2015/03/16/Mac下程序员博客之Hexo-GitHub-Pages-GitCafe-Pages-DNSPod/" target="_blank" rel="external">Mac下程序员博客之 Hexo + GitHub Pages + GitCafe Pages + DNSPod</a><br><a href="http://zjubank.com/2015/12/01/hexo-blog/" target="_blank" rel="external">Hexo搭建，Wordpress迁移和Github部署</a><br>3.如果你也喜欢hexo的 gilia 和 gelee 主题，请一定要看看下面这些：<br><a href="http://littledogboy.com/2015/10/08/Hexo教程(一" target="_blank" rel="external">Shumin Wu</a>——搭建各人博客/)<br><a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">MOxFIVE GitHub</a>  </p>
-<h1 id="u4EC0_u4E48_u662Fhexo"><a href="#u4EC0_u4E48_u662Fhexo" class="headerlink" title="<strong>什么是hexo</strong>"></a><strong>什么是hexo</strong></h1><p>出自tommy351之手，hexo是一个基于Node.js的静态博客程序，其编译速度之快，让我很是惊讶。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br>之前弄过Wordpress,最初的想法是用它来学习HTML，就注册了域名，还花了几十块钱。结果，一点html也没有用到。结果就不了了之，几十块钱也打水漂了。是不是我太傻不会弄啊？<br>后来看到了hexo，又激起了我当初的那个做博客的梦，毕竟几十块钱不能白花啊。<br>下面总结建站过程中的一些总结。也当是笔记了，以后找起来也方便。</p>
-<h1 id="u603B_u7ED3_u7B14_u8BB0"><a href="#u603B_u7ED3_u7B14_u8BB0" class="headerlink" title="<strong>总结笔记</strong>"></a><strong>总结笔记</strong></h1><h2 id="u5173_u4E8E_CNAME"><a href="#u5173_u4E8E_CNAME" class="headerlink" title="<em>关于 CNAME</em>"></a><em>关于 CNAME</em></h2><p>在电脑上的hexo所建立的网站路径下有个source文件夹，就把CNAME放在这里就可以了。每次 <code>hexo generate</code>时，会把CNAME拷贝到<code>./punlic</code>文件夹下。而每次<code>hexo deploy</code>时，又会把<code>./public</code>文件夹下的内容同步到github中。</p>
+<h5 id="1-_u770B_u5B8C_u4E86_u4E0A_u9762_u8FD9_u4E2A_u5B98_u7F51_u6559_u7A0B_uFF0C_u57FA_u672C_u4E0A_u90FD_u4F1A_u4E86_u3002"><a href="#1-_u770B_u5B8C_u4E86_u4E0A_u9762_u8FD9_u4E2A_u5B98_u7F51_u6559_u7A0B_uFF0C_u57FA_u672C_u4E0A_u90FD_u4F1A_u4E86_u3002" class="headerlink" title="1.看完了上面这个官网教程，基本上都会了。"></a>1.看完了上面这个官网教程，基本上都会了。</h5><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo 官网地址</a>   </p>
+<h5 id="2-_u4E0B_u9762_u662F_u53EF_u4EE5_u4E00_u8DEF_u70B9_u51FB_u4E0B_u4E00_u6B65_u7684_u6559_u7A0B_u63A8_u8350_uFF1A"><a href="#2-_u4E0B_u9762_u662F_u53EF_u4EE5_u4E00_u8DEF_u70B9_u51FB_u4E0B_u4E00_u6B65_u7684_u6559_u7A0B_u63A8_u8350_uFF1A" class="headerlink" title="2.下面是可以一路点击下一步的教程推荐："></a>2.下面是可以一路点击下一步的教程推荐：</h5><p><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a><br><a href="http://godera.org/2015/03/16/Mac下程序员博客之Hexo-GitHub-Pages-GitCafe-Pages-DNSPod/" target="_blank" rel="external">Mac下程序员博客之 Hexo + GitHub Pages + GitCafe Pages + DNSPod</a><br><a href="http://zjubank.com/2015/12/01/hexo-blog/" target="_blank" rel="external">Hexo搭建，Wordpress迁移和Github部署</a><br>3.如果你也喜欢hexo的 gilia 和 gelee 主题，请一定要看看下面这些：<br><a href="http://littledogboy.com/2015/10/08/Hexo教程(一" target="_blank" rel="external">Shumin Wu</a>——搭建各人博客/)<br><a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">MOxFIVE GitHub</a>  </p>
+<h1 id="u4EC0_u4E48_u662Fhexo"><a href="#u4EC0_u4E48_u662Fhexo" class="headerlink" title="<strong>什么是hexo</strong>"></a><strong>什么是hexo</strong></h1><p>&emsp;&emsp;一个快速、简洁且高效的博客框架。<br>&emsp;&emsp;出自tommy351之手，hexo是一个基于Node.js的静态博客程序，其编译速度之快，让我很是惊讶。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br>&emsp;&emsp;之前弄过Wordpress,最初的想法是用它来学习HTML，就注册了域名，还花了几十块钱。结果，一点html也没有用到。结果就不了了之，几十块钱也打水漂了。是不是我太傻不会弄啊？<br>&emsp;&emsp;后来看到了hexo，又激起了我当初的那个做博客的梦，毕竟几十块钱不能白花啊。<br>下面总结建站过程中的一些总结。也当是笔记了，以后找起来也方便。</p>
+<h1 id="u603B_u7ED3_u7B14_u8BB0"><a href="#u603B_u7ED3_u7B14_u8BB0" class="headerlink" title="<strong>总结笔记</strong>"></a><strong>总结笔记</strong></h1><p>下面总结建站过程中的一些总结。也当是笔记了，以后找起来也方便。</p>
+<h2 id="u5173_u4E8E_CNAME"><a href="#u5173_u4E8E_CNAME" class="headerlink" title="<em>关于 CNAME</em>"></a><em>关于 CNAME</em></h2><p>在电脑上的hexo所建立的网站路径下有个source文件夹，就把CNAME放在这里就可以了。每次 <code>hexo generate</code>时，会把CNAME拷贝到<code>./punlic</code>文件夹下。而每次<code>hexo deploy</code>时，又会把<code>./public</code>文件夹下的内容同步到github中。</p>
 <h2 id="u5173_u4E8E__u63D2_u5165_u4F18_u9177_u89C6_u9891"><a href="#u5173_u4E8E__u63D2_u5165_u4F18_u9177_u89C6_u9891" class="headerlink" title="<em>关于 插入优酷视频</em>"></a><em>关于 插入优酷视频</em></h2><p>打开想链接的优酷上的视频，点击视频下面的分享，会有html链接。<br><code>&lt;embed src=&quot;http://player.youku.com/player.php/... &gt;&lt;/embed&gt;</code><br>把这个链接直接复制到<code>.md</code> 文件中即可。亲测。</p>
+<p>**</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>摸索了两天一夜了，终于搞定了 mac + github + hexo。。。我想说hexo很值得做。markdown语法也很有意思，一定要get。</p>
-<h1 id="u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F"><a href="#u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F" class="headerlink" title="<strong>搭建hexo博客之前 你应该具备什么？</strong>"></a><strong>搭建hexo博客之前 你应该具备什么？</strong></h1><p>你需要一颗好奇的新，肯花时间就行。博主就是零基础，什么node.js，之前就没听过。所以零基础的你一定可以的。  </p>
-<h2 id="u9700_u8981_u7684_u5DE5_u5177"><a href="#u9700_u8981_u7684_u5DE5_u5177" class="headerlink" title="<strong>需要的工具</strong>"></a><strong>需要的工具</strong></h2><p>一台mac,一个github账户<br>]]>
+    <![CDATA[<p>摸索了两天一夜了，终于搞定了 mac + github + hexo。。。我想说hexo很值得做。markdown语法也很有意思，一定要get。  </p>
+<h1 id="u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F"><a href="#u642D_u5EFAhexo_u535A_u5BA2_u4E4B_u524D__u4F60_u5E94_u8BE5_u5177_u5907_u4EC0_u4E48_uFF1F" class="headerlink" title="<strong>搭建hexo博客之前 你应该具备什么？</strong>"></a><strong>搭建hexo博客之前 你应该具备什么？</strong></h1><p>&emsp;&emsp;你需要一颗好奇的新，肯花时间就行。博主就是零基础，什么node.js，之前就没听过。所以零基础的你一定可以的。  </p>
+<h2 id="u9700_u8981_u7684_u5DE5_u5177"><a href="#u9700_u8981_u7684_u5DE5_u5177" class="headerlink" title="<strong>需要的工具</strong>"></a><strong>需要的工具</strong></h2><p>&emsp;&emsp;一台mac,一个github账户<br>]]>
     
     </summary>
     
       <category term="hexo" scheme="http://luehningeek.com/index/tags/hexo/"/>
-    
-      <category term="随笔" scheme="http://luehningeek.com/index/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="hexo" scheme="http://luehningeek.com/index/categories/hexo/"/>
     
