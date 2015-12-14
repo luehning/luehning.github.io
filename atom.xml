@@ -4,7 +4,7 @@
   <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luehningeek.com/index/"/>
-  <updated>2015-12-14T14:08:45.000Z</updated>
+  <updated>2015-12-14T14:09:50.000Z</updated>
   <id>http://luehningeek.com/index/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[hexo 使用指南 markdown 方法]]></title>
     <link href="http://luehningeek.com/index/2015/12/14/hello-world/"/>
     <id>http://luehningeek.com/index/2015/12/14/hello-world/</id>
-    <published>2015-12-14T14:08:45.000Z</published>
-    <updated>2015-12-14T14:08:45.000Z</updated>
+    <published>2015-12-14T14:09:50.000Z</published>
+    <updated>2015-12-14T14:09:50.000Z</updated>
     <content type="html"><![CDATA[<p>markdown语法很简洁明了。接下来的时间就是总结markdown啦。</p>
 <p><img src="http://qiniu-up.qiniudn.com/5af659cfd5cb2058ab3908727ddb9f56" alt=""></p>
 <a id="more"></a>
