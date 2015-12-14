@@ -4,7 +4,7 @@
   <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luehningeek.com/index/"/>
-  <updated>2015-12-14T14:09:50.000Z</updated>
+  <updated>2015-12-14T14:53:53.000Z</updated>
   <id>http://luehningeek.com/index/</id>
   
   <author>
@@ -18,10 +18,10 @@
     <title><![CDATA[hexo 使用指南 markdown 方法]]></title>
     <link href="http://luehningeek.com/index/2015/12/14/hello-world/"/>
     <id>http://luehningeek.com/index/2015/12/14/hello-world/</id>
-    <published>2015-12-14T14:09:50.000Z</published>
-    <updated>2015-12-14T14:09:50.000Z</updated>
-    <content type="html"><![CDATA[<p>markdown语法很简洁明了。接下来的时间就是总结markdown啦。</p>
-<p><img src="http://qiniu-up.qiniudn.com/5af659cfd5cb2058ab3908727ddb9f56" alt=""></p>
+    <published>2015-12-14T14:53:53.000Z</published>
+    <updated>2015-12-14T14:53:53.000Z</updated>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;markdown语法很简洁明了。接下来的时间就是总结markdown啦。</p>
+<p><img src="http://qiniu-up.qiniudn.com/30431db5b757655b2db58b4bfa7d9299" alt=""></p>
 <a id="more"></a>
 <h1 id="u535A_u6587_u4E2D_u6DFB_u52A0_u76EE_u5F55"><a href="#u535A_u6587_u4E2D_u6DFB_u52A0_u76EE_u5F55" class="headerlink" title="博文中添加目录"></a>博文中添加目录</h1><p><code># 这是一级目录</code><br><code>## 这是二级目录</code><br><code>### 这是三级目录</code></p>
 <p>&emsp;&emsp;有些博客主题会自动生成文章目录，前提是你要在文章的目录上标上<code>#</code>符号。你看到的<code>#</code>是写在目录前面的，<code>#</code>的个数代表目录的等级数。如果你用恰巧也用macdown写博文的话，可以把光标移到你认为合适的地方，按住<code>command + 1</code>到 <code>command + 6</code>,分别对应了一到六级目录。<br>&emsp;&emsp;从NEXT主题自动生成的目录来看，1、2、3这种为一级目录；1.1、1.2、1.3这种为二级目录；1.1.1、1.1.2、1.1.3为三级目录，以此类推。 </p>
@@ -33,15 +33,16 @@
 <h6 id="u516D_u7EA7_u76EE_u5F55"><a href="#u516D_u7EA7_u76EE_u5F55" class="headerlink" title="六级目录"></a>六级目录</h6><p>六级目录内容</p>
 <p><img src="http://ww2.sinaimg.cn/mw690/c0629545gw1eyzifig5r7j208o07tjrl.jpg" alt="">    </p>
 <hr>
-<h1 id="u9996_u884C_u7F29_u8FDB"><a href="#u9996_u884C_u7F29_u8FDB" class="headerlink" title="首行缩进"></a>首行缩进</h1><p><code>&amp;emsp;&amp;emsp;</code><br>&emsp;&emsp;如果博文是中文的，最好还是做 首行的缩进，这样才不会对阅读带来视觉的压迫感。在段落首字母前加入</p>
-<h1 id="u6587_u5B57_u5C45_u4E2D_u5BF9_u9F50"><a href="#u6587_u5B57_u5C45_u4E2D_u5BF9_u9F50" class="headerlink" title="文字居中对齐"></a>文字居中对齐</h1><p>首先markdown不支持 文字居中对齐。但是我们依然可以使用HTML语言来进行设置。  </p>
+<h1 id="u9996_u884C_u7F29_u8FDB"><a href="#u9996_u884C_u7F29_u8FDB" class="headerlink" title="首行缩进"></a>首行缩进</h1><p><code>&amp;emsp;&amp;emsp;</code><br>&emsp;&emsp;如果博文是中文的，最好还是做 首行的缩进，这样才不会对阅读带来视觉的压迫感。在段落首字母前加入。记不住怎么办？ems能记住吧？<br>&emsp;&emsp;HTML中的缩进其实还有<code>&amp;ensp</code>、<code>&amp;nbsp;</code>、<code>&amp;thinsp;</code>,以后再说吧。</p>
+<h1 id="u6587_u5B57_u5C45_u4E2D_u5BF9_u9F50"><a href="#u6587_u5B57_u5C45_u4E2D_u5BF9_u9F50" class="headerlink" title="文字居中对齐"></a>文字居中对齐</h1><p>&emsp;&emsp;首先markdown不支持 文字居中对齐。但是我们依然可以使用HTML语言来进行设置。  </p>
 <ul>
-<li>正文使用<code>&lt;center&gt;文字&lt;/center&gt;</code><br>*标题使用<code>&lt;h1 style=&quot;text-align:center&quot;&gt;文字&lt;h1&gt;</code><br>下面是效果：<br><center>luehningeek</center><br><h1 style="text-align:center">luehningeek<h1>  </h1></h1></li>
+<li>正文使用<code>&lt;center&gt;文字&lt;/center&gt;</code><br>*标题使用<code>&lt;h1 style=&quot;text-align:center&quot;&gt;文字&lt;h1&gt;</code><br>&emsp;&emsp;下面是效果：<br><center>luehningeek</center><br><h1 style="text-align:center">luehningeek<h1>  </h1></h1></li>
 </ul>
+<h1 id="u6587_u7AE0_u63D2_u5165__u9605_u8BFB_u5168_u6587"><a href="#u6587_u7AE0_u63D2_u5165__u9605_u8BFB_u5168_u6587" class="headerlink" title="文章插入 阅读全文"></a>文章插入 阅读全文</h1><p>&emsp;&emsp;在你想在主页中隐藏的文章上面插入 <code>&lt;!-- more --&gt;</code> 就能隐藏下面的文章而让 主页变得很整洁。感受一下，多么有力量的语言啊。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>markdown语法很简洁明了。接下来的时间就是总结markdown啦。</p>
-<p><img src="http://qiniu-up.qiniudn.com/5af659cfd5cb2058ab3908727ddb9f56" alt=""></p>]]>
+    <![CDATA[<p>&emsp;&emsp;markdown语法很简洁明了。接下来的时间就是总结markdown啦。</p>
+<p><img src="http://qiniu-up.qiniudn.com/30431db5b757655b2db58b4bfa7d9299" alt=""></p>]]>
     
     </summary>
     
@@ -50,6 +51,30 @@
       <category term="随笔" scheme="http://luehningeek.com/index/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="markdown" scheme="http://luehningeek.com/index/categories/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[人是会伤感的动物]]></title>
+    <link href="http://luehningeek.com/index/2015/12/14/diary001/"/>
+    <id>http://luehningeek.com/index/2015/12/14/diary001/</id>
+    <published>2015-12-14T14:13:10.000Z</published>
+    <updated>2015-12-14T14:41:59.000Z</updated>
+    <content type="html"><![CDATA[<center>人是会伤感的动物</center><br><center>一条鱼</center><br><center>听说他们的记忆只有七秒</center><br><center>那就变成笨笨的鱼</center><br><center>总之记忆越少越好</center>  
+
+<center><img src="http://qiniu-up.qiniudn.com/e04a0896bb514dfbaa4e3d7db83b7ea7" alt=""></center><br><a id="more"></a><br><center>人是会伤感的动物</center><br><center>一个人</center><br><center>就会放大那份伤感</center><br><center>我总想忘记</center><br><center>可偏偏又想起，在夜深时分</center>
+
+<center>人是会伤感的动物</center><br><center>一首歌</center><br><center>让你哭也会让你笑</center><br><center>他乡异国</center><br><center>听到的是思乡的味道</center>]]></content>
+    <summary type="html">
+    <![CDATA[<center>人是会伤感的动物</center><br><center>一条鱼</center><br><center>听说他们的记忆只有七秒</center><br><center>那就变成笨笨的鱼</center><br><center>总之记忆越少越好</center>  
+
+<center><img src="http://qiniu-up.qiniudn.com/e04a0896bb514dfbaa4e3d7db83b7ea7" alt=""></center><br>]]>
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://luehningeek.com/index/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="记" scheme="http://luehningeek.com/index/categories/%E8%AE%B0/"/>
     
   </entry>
   
