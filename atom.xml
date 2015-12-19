@@ -4,7 +4,7 @@
   <subtitle><![CDATA[程序狗 * 摄影小小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luehningeek.com/index/"/>
-  <updated>2015-12-14T14:56:22.000Z</updated>
+  <updated>2015-12-19T13:09:44.000Z</updated>
   <id>http://luehningeek.com/index/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[hexo 使用指南 markdown 方法]]></title>
-    <link href="http://luehningeek.com/index/2015/12/14/hello-world/"/>
-    <id>http://luehningeek.com/index/2015/12/14/hello-world/</id>
-    <published>2015-12-14T14:56:22.000Z</published>
-    <updated>2015-12-14T14:56:22.000Z</updated>
+    <link href="http://luehningeek.com/index/2015/12/19/hello-world/"/>
+    <id>http://luehningeek.com/index/2015/12/19/hello-world/</id>
+    <published>2015-12-19T13:09:44.000Z</published>
+    <updated>2015-12-19T13:09:44.000Z</updated>
     <content type="html"><![CDATA[<center>markdown语法很简洁明了。接下来的时间就是总结markdown啦。</center>
 
 <p><img src="http://qiniu-up.qiniudn.com/30431db5b757655b2db58b4bfa7d9299" alt=""></p>
@@ -40,6 +40,7 @@
 <li>正文使用<code>&lt;center&gt;文字&lt;/center&gt;</code><br>*标题使用<code>&lt;h1 style=&quot;text-align:center&quot;&gt;文字&lt;h1&gt;</code><br>&emsp;&emsp;下面是效果：<br><center>luehningeek</center><br><h1 style="text-align:center">luehningeek<h1>  </h1></h1></li>
 </ul>
 <h1 id="u6587_u7AE0_u63D2_u5165__u9605_u8BFB_u5168_u6587"><a href="#u6587_u7AE0_u63D2_u5165__u9605_u8BFB_u5168_u6587" class="headerlink" title="文章插入 阅读全文"></a>文章插入 阅读全文</h1><p>&emsp;&emsp;在你想在主页中隐藏的文章上面插入 <code>&lt;!-- more --&gt;</code> 就能隐藏下面的文章而让 主页变得很整洁。感受一下，多么有力量的语言啊。</p>
+<h1 id="u6587_u5B57_u52A0_u7C97_26amp_3B_u659C_u4F53"><a href="#u6587_u5B57_u52A0_u7C97_26amp_3B_u659C_u4F53" class="headerlink" title="文字加粗&amp;斜体"></a>文字加粗&amp;斜体</h1><p>文字两边个一个 <code>*</code> 号为斜体，两个为加粗，三个为斜体并加粗。实例如下：<br><code>*斜体*</code>&emsp;&emsp;&emsp;<em>斜体</em><br><code>**加粗**</code>&emsp;&emsp;<strong>加粗</strong><br><code>***斜体并加粗***</code>  <strong><em>斜体并加粗</em></strong></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<center>markdown语法很简洁明了。接下来的时间就是总结markdown啦。</center>
@@ -106,19 +107,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[构思中]]></title>
-    <link href="http://luehningeek.com/index/2015/12/11/aboutme/"/>
-    <id>http://luehningeek.com/index/2015/12/11/aboutme/</id>
-    <published>2015-12-10T16:14:59.000Z</published>
-    <updated>2015-12-12T14:53:09.000Z</updated>
-    <content type="html"></content>
-    <summary type="html">
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[hexo 博客搭建]]></title>
     <link href="http://luehningeek.com/index/2015/12/10/hello-frist-blog/"/>
     <id>http://luehningeek.com/index/2015/12/10/hello-frist-blog/</id>
@@ -146,6 +134,80 @@
       <category term="hexo" scheme="http://luehningeek.com/index/tags/hexo/"/>
     
       <category term="hexo" scheme="http://luehningeek.com/index/categories/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[uml]]></title>
+    <link href="http://luehningeek.com/index/2014/03/19/uml/"/>
+    <id>http://luehningeek.com/index/2014/03/19/uml/</id>
+    <published>2014-03-19T12:49:22.000Z</published>
+    <updated>2015-12-19T13:15:23.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="UML__u662F_u795E_u9A6C"><a href="#UML__u662F_u795E_u9A6C" class="headerlink" title="UML 是神马"></a>UML 是神马</h1><p>uml 全称为Unified Modeling Language，是Grady Booch等人在1990年开发出来的一种统一建模语言。UML规范用来描述建模的概念有，类（对象的）、对象、关联、职责、行为、接口、用例、包、顺序、协作，以及状态。<br><img src="http://ww2.sinaimg.cn/mw690/c0629545gw1ez5a0sv84tj20fi0a4ta8.jpg" alt=""></p>
+<h2 id="u4E94_u79CD_u7C7B_u56FE_u5B9A_u4E49"><a href="#u4E94_u79CD_u7C7B_u56FE_u5B9A_u4E49" class="headerlink" title="五种类图定义"></a>五种类图定义</h2><ol>
+<li>用例图（从用户角度描述系统功能，并指各功能的操作者）  </li>
+<li><em>静态图</em>（类图，包图，对象图）<br>类图：描述系统中类的静态结构<br>包图：是包和类组成的，表示包与包之间的关系，包图描述系统的分层结构<br>对象图：是类图的实例  </li>
+<li><em>行为图</em>（描述系统动态模型和对象组成的交换关系。包括状态图和活动图 ）<br>活动图：描述了业务实现用例的工作流程<br>状态图：是描述状态到状态控制流，常用于动态特性建模  </li>
+<li><em>交互图</em>（描述对象之间的交互关系 ）<br>顺序图：对象之间的动态合作关系，强调对象发送消息的顺序，同时显示对象之间的交互<br>合作图：描述对象之间的协助关系  </li>
+<li><em>实现图</em><br>配置图：定义系统中软硬件的物理体系结构</li>
+</ol>
+<h1 id="UML__u79CD_u7C7B"><a href="#UML__u79CD_u7C7B" class="headerlink" title="UML 种类"></a>UML 种类</h1><ol>
+<li>Class Diagram</li>
+<li>Component Diagram</li>
+<li>Deployment Diagram</li>
+<li>Use Case Diagram</li>
+<li>Activity Diagram</li>
+<li>State Machine Diagram</li>
+<li>Sequence Diagram</li>
+<li>Object Diagram</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="UML__u662F_u795E_u9A6C"><a href="#UML__u662F_u795E_u9A6C" class="headerlink" title="UML 是神马"></a>UML 是神马</h1><p>uml 全称为Unified Model]]>
+    </summary>
+    
+      <category term="uml" scheme="http://luehningeek.com/index/tags/uml/"/>
+    
+      <category term="Software project" scheme="http://luehningeek.com/index/categories/Software-project/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Agile 101 实践]]></title>
+    <link href="http://luehningeek.com/index/2014/03/11/Agile2/"/>
+    <id>http://luehningeek.com/index/2014/03/11/Agile2/</id>
+    <published>2014-03-10T16:14:59.000Z</published>
+    <updated>2015-12-19T12:51:23.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li>On-site Customer</li>
+<li>User Story</li>
+<li>Release Plannig</li>
+<li>Estimation</li>
+<li>Planning Poker</li>
+<li>Sprint</li>
+<li>Sprint Planning</li>
+<li>Daily Scrum</li>
+<li>Pair Programming</li>
+<li>Continuous Integration(CI)</li>
+<li>Velocity</li>
+<li>Sprint Review</li>
+<li>Retrospective</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li>On-site Customer</li>
+<li>User Story</li>
+<li>Release Plannig</li>
+<li>Estimation</li>
+<li>Planning Poker</li>
+<li>Sprint</li>
+<li>]]>
+    </summary>
+    
+      <category term="Agile" scheme="http://luehningeek.com/index/tags/Agile/"/>
+    
+      <category term="Software project" scheme="http://luehningeek.com/index/categories/Software-project/"/>
     
   </entry>
   
