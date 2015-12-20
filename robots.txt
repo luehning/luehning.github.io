@@ -1,7 +1,13 @@
 User-agent: *
 Allow: /
-Allow: /archives
+Allow: /archives/
 
 Crawl-delay: 60
-Disallow: /tags/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
 Sitemap: http://luehningeek.com/sitemap.xml
+Sitemap: http://www.arao.me/baidusitemap.xml
