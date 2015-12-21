@@ -2,12 +2,13 @@ User-agent: *
 Allow: /
 Allow: /archives/
 
+User-agent: Swiftbot
+Allow: /
+
 Crawl-delay: 60
-Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
-Disallow: /fancybox/
 
 Sitemap: http://luehningeek.com/sitemap.xml
 Sitemap: http://www.arao.me/baidusitemap.xml
