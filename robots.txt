@@ -1,14 +1,8 @@
-User-agent: *
-Allow: /
-Allow: /archives/
-
 User-agent: Swiftbot
-Allow: /
+Disallow:
 
-Crawl-delay: 60
-Disallow: /css/
-Disallow: /fonts/
-Disallow: /vendors/
+User-agent: *
+allow: /
 
 Sitemap: http://luehningeek.com/sitemap.xml
 Sitemap: http://www.arao.me/baidusitemap.xml
