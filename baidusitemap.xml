@@ -4,12 +4,52 @@
 
     
   <url>
+    <loc>http://luehningeek.com/index/2014/01/08/howBadUWannaS/</loc>
+    <lastmod>2016-01-08T08:38:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>howBadUWannaS</title>
+        <pubTime>2014-01-08T08:24:17.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+             
+              <breadCrumb title="记" url="http://luehningeek.com/index/categories/%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://luehningeek.com/index/2015/12/20/mac001-ThreeFingerDrag/</loc>
+    <lastmod>2015-12-21T07:35:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>macbook三指拖拽开启方法</title>
+        <pubTime>2015-12-20T08:17:13.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://luehningeek.com/index/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://luehningeek.com/index/2014/03/25/softwareProjectManagement/</loc>
     <lastmod>2015-12-21T07:32:50.000Z</lastmod>
     <data>
         <display>
         <title>软件项目管理</title>
-        <pubTime>2014-03-25T06:32:13.000Z</pubTime>
+        <pubTime>2014-03-25T07:32:13.000Z</pubTime>
         
         <tag>项目管理</tag>
          
@@ -29,7 +69,7 @@
     <data>
         <display>
         <title>人是会伤感的动物</title>
-        <pubTime>2015-12-14T14:13:10.000Z</pubTime>
+        <pubTime>2015-12-14T15:13:10.000Z</pubTime>
         
         <tag>随笔</tag>
          
@@ -72,7 +112,7 @@
     <data>
         <display>
         <title>ObjectiveC笔记一</title>
-        <pubTime>2014-02-02T13:48:25.000Z</pubTime>
+        <pubTime>2014-02-02T14:48:25.000Z</pubTime>
         
         <tag>ObjectiveC</tag>
          
@@ -90,32 +130,12 @@
     
     
   <url>
-    <loc>http://luehningeek.com/index/2015/12/20/mac001-ThreeFingerDrag/</loc>
-    <lastmod>2015-12-20T11:02:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>macbook三指拖拽开启方法</title>
-        <pubTime>2015-12-20T07:17:13.000Z</pubTime>
-        
-        <tag>MacBook</tag>
-         
-         
-           
-             
-              <breadCrumb title="macbook指南" url="http://luehningeek.com/index/categories/macbook%E6%8C%87%E5%8D%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://luehningeek.com/index/2015/11/11/hexo%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BGitHubPages%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2015-12-20T11:01:34.000Z</lastmod>
     <data>
         <display>
         <title>博客搭建之GitHubPages设置</title>
-        <pubTime>2015-11-11T10:10:37.000Z</pubTime>
+        <pubTime>2015-11-11T11:10:37.000Z</pubTime>
         
         <tag>GithubPages</tag>
          
@@ -137,7 +157,7 @@
     <data>
         <display>
         <title>博客搭建之hexo环境</title>
-        <pubTime>2015-11-09T15:09:31.000Z</pubTime>
+        <pubTime>2015-11-09T16:09:31.000Z</pubTime>
         
         <tag>hexo</tag>
          
@@ -157,7 +177,7 @@
     <data>
         <display>
         <title>uml</title>
-        <pubTime>2014-03-19T12:49:22.000Z</pubTime>
+        <pubTime>2014-03-19T13:49:22.000Z</pubTime>
         
         <tag>uml</tag>
          
@@ -177,7 +197,7 @@
     <data>
         <display>
         <title>Agile 101 实践</title>
-        <pubTime>2014-03-10T16:14:59.000Z</pubTime>
+        <pubTime>2014-03-10T17:14:59.000Z</pubTime>
         
         <tag>Agile</tag>
          
@@ -197,7 +217,7 @@
     <data>
         <display>
         <title>Agile 101 Scrum 和 XP的那些事</title>
-        <pubTime>2014-03-01T02:04:51.000Z</pubTime>
+        <pubTime>2014-03-01T03:04:51.000Z</pubTime>
         
         <tag>Agile</tag>
          
@@ -219,7 +239,7 @@
     <data>
         <display>
         <title>酷利亚 韩国儿童抗菌保鲜袋的领跑企业</title>
-        <pubTime>2015-12-12T13:36:51.000Z</pubTime>
+        <pubTime>2015-12-12T14:36:51.000Z</pubTime>
         
         <tag>儿童保鲜袋</tag>
          
