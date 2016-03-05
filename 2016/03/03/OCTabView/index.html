@@ -1,0 +1,777 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="TabView,iOS学习笔记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="手机上的很多应用都采用了Tab布局。比如通讯录，再比如淘宝。 iOS系统内置了下面12种tab。 那么又该如何生成TabView呢？点击tab后又该如何做出相应呢？ 
+
+UITabBarSystemItemMore,UITabBarSystemItemFavorites,UITabBarSystemItemFeatured,UITabBarSystemItemTopRated,UITabBarSy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义TabView的实现方法">
+<meta property="og:url" content="http://luehningeek.com/index/2016/03/03/OCTabView/index.html">
+<meta property="og:site_name" content="吕宁的博客">
+<meta property="og:description" content="手机上的很多应用都采用了Tab布局。比如通讯录，再比如淘宝。 iOS系统内置了下面12种tab。 那么又该如何生成TabView呢？点击tab后又该如何做出相应呢？ 
+
+UITabBarSystemItemMore,UITabBarSystemItemFavorites,UITabBarSystemItemFeatured,UITabBarSystemItemTopRated,UITabBarSy">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/c0629545jw1f1mefkmxhcg20a00hs4dx.gif">
+<meta property="og:updated_time" content="2016-03-05T15:40:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自定义TabView的实现方法">
+<meta name="twitter:description" content="手机上的很多应用都采用了Tab布局。比如通讯录，再比如淘宝。 iOS系统内置了下面12种tab。 那么又该如何生成TabView呢？点击tab后又该如何做出相应呢？ 
+
+UITabBarSystemItemMore,UITabBarSystemItemFavorites,UITabBarSystemItemFeatured,UITabBarSystemItemTopRated,UITabBarSy">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 自定义TabView的实现方法 | 吕宁的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-71185500-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?758a4ccafde912c6388d2c1e124";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">吕宁的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">程序狗 * 摄影小小生</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/aboutme" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '1K7rrNfthjpxAwuM6jW-','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                自定义TabView的实现方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-03T11:04:51+08:00" content="2016-03-03">
+              2016-03-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/03/OCTabView/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/OCTabView/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          <span id="busuanzi_container_page_pv">  |  阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+           
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>手机上的很多应用都采用了Tab布局。比如通讯录，再比如淘宝。 iOS系统内置了下面12种tab。 那么又该如何生成TabView呢？点击tab后又该如何做出相应呢？ </p>
+<blockquote>
+<p>UITabBarSystemItemMore,<br>UITabBarSystemItemFavorites,<br>UITabBarSystemItemFeatured,<br>UITabBarSystemItemTopRated,<br>UITabBarSystemItemRecents,<br>UITabBarSystemItemContacts,<br>UITabBarSystemItemHistory,<br>UITabBarSystemItemBookmarks,<br>UITabBarSystemItemSearch,<br>UITabBarSystemItemDownloads,<br>UITabBarSystemItemMostRecent,<br>UITabBarSystemItemMostViewed,</p>
+</blockquote>
+<h2 id="u57FA_u672C_u8FC7_u7A0B"><a href="#u57FA_u672C_u8FC7_u7A0B" class="headerlink" title="基本过程"></a>基本过程</h2><ol>
+<li>创建一个controller</li>
+<li>设置controller在Tab上的顺序</li>
+<li>创建导航控制器UINavigationController</li>
+<li>把导航存入数组并赋值给一个UITabBarController</li>
+<li>设置tabbarVc 为window的根控制器</li>
+</ol>
+<h2 id="u8BE6_u7EC6_u4EE3_u7801"><a href="#u8BE6_u7EC6_u4EE3_u7801" class="headerlink" title="详细代码"></a>详细代码</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"AppDelegate.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNFavoritesController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNMoreController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNContactsController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNBookMarksController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNFeaturedController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNHistoryController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNRecentsController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNSearchController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNTopRatedController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNDownloadController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNMostRecentController.h"</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"LNMostViewedController.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.window</span> = [[<span class="built_in">UIWindow</span> alloc]initWithFrame:[[<span class="built_in">UIScreen</span> mainScreen] bounds]];</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.window</span><span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">    </span><br><span class="line">    LNContactsController  *contacts  = [[LNContactsController alloc]init];</span><br><span class="line">    LNBookMarksController *bookMarks = [[LNBookMarksController alloc]init];</span><br><span class="line">    LNFavoritesController *favorites = [[LNFavoritesController alloc]init];</span><br><span class="line">    LNMoreController      *more      = [[LNMoreController alloc]init];</span><br><span class="line">    L<span class="built_in">NSearchController</span>    *search    =  [[L<span class="built_in">NSearchController</span> alloc]init];</span><br><span class="line">    LNRecentsController   *recents   = [[LNRecentsController alloc]init];</span><br><span class="line">    LNFeaturedController  *featured  = [[LNFeaturedController alloc]init];</span><br><span class="line">    LNHistoryController   *history   = [[LNHistoryController alloc]init];</span><br><span class="line">    LNTopRatedController  *topRated = [[LNTopRatedController alloc]init];</span><br><span class="line">    LNMostViewedController *mostViewed = [[LNMostViewedController alloc]init];</span><br><span class="line">    LNMostRecentController *mostRecent = [[LNMostRecentController alloc]init];</span><br><span class="line">    LNDownloadController  *download  =  [[LNDownloadController alloc]init];</span><br><span class="line">    <span class="comment">//设置controller在Tab上的顺序</span></span><br><span class="line">    <span class="comment">//图标使用系统图标UITabBarSystemItem</span></span><br><span class="line">    contacts<span class="variable">.tabBarItem</span> =  [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemContacts</span>  tag:<span class="number">0</span>];</span><br><span class="line">    bookMarks<span class="variable">.tabBarItem</span> = [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemBookmarks</span> tag:<span class="number">1</span>];</span><br><span class="line">    favorites<span class="variable">.tabBarItem</span> = [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemFavorites</span> tag:<span class="number">2</span>];</span><br><span class="line">    history<span class="variable">.tabBarItem</span>  =  [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemHistory</span>   tag:<span class="number">3</span>];</span><br><span class="line">    search<span class="variable">.tabBarItem</span>   =  [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemSearch</span>    tag:<span class="number">4</span>];</span><br><span class="line">    recents<span class="variable">.tabBarItem</span>   = [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemRecents</span>   tag:<span class="number">5</span>];</span><br><span class="line">    featured<span class="variable">.tabBarItem</span> =  [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemFeatured</span>  tag:<span class="number">6</span>];</span><br><span class="line">    topRated<span class="variable">.tabBarItem</span>  =  [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemTopRated</span> tag:<span class="number">7</span>];</span><br><span class="line">     more<span class="variable">.tabBarItem</span>        = [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemMore</span>   tag:<span class="number">8</span>];</span><br><span class="line">    mostRecent<span class="variable">.tabBarItem</span>   = [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemMostRecent</span>   tag:<span class="number">9</span>];</span><br><span class="line">    mostViewed<span class="variable">.tabBarItem</span>   = [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemMostViewed</span>   tag:<span class="number">10</span>];</span><br><span class="line">    download<span class="variable">.tabBarItem</span>     = [[<span class="built_in">UITabBarItem</span> alloc]initWithTabBarSystemItem:<span class="built_in">UITabBarSystemItemDownloads</span>   tag:<span class="number">11</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建导航控制器</span></span><br><span class="line">    <span class="built_in">UINavigationController</span> *contactsNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:contacts];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *bookMarksNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:bookMarks];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *favoritesNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:favorites];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *moreNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:more];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *searchNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:search];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *recentsNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:recents];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *featuredNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:featured];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *historyNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:history];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *downloadNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:download];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *mostViewedNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:mostViewed];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *mostRecentNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:mostRecent];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *topRatedNav = [[<span class="built_in">UINavigationController</span> alloc]initWithRootViewController:topRated];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//把导航存入数组</span></span><br><span class="line">    <span class="built_in">UITabBarController</span> *tabbarVc = [[<span class="built_in">UITabBarController</span> alloc]init];</span><br><span class="line">    tabbarVc<span class="variable">.viewControllers</span> = [<span class="built_in">NSArray</span> arrayWithObjects:contactsNav, bookMarksNav ,favoritesNav,searchNav,recentsNav,featuredNav,historyNav,downloadNav,mostRecentNav,mostViewedNav,topRatedNav,moreNav,<span class="literal">nil</span>];</span><br><span class="line">   </span><br><span class="line">    <span class="comment">//设置tabbarVc 为window的根控制器</span></span><br><span class="line">    <span class="keyword">self</span><span class="variable">.window</span><span class="variable">.rootViewController</span> = tabbarVc;</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.window</span> makeKeyAndVisible];</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h2 id="u6700_u7EC8_u7ED3_u679C"><a href="#u6700_u7EC8_u7ED3_u679C" class="headerlink" title="最终结果"></a>最终结果</h2><p><img src="http://ww1.sinaimg.cn/large/c0629545jw1f1mefkmxhcg20a00hs4dx.gif" alt=""></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/TabView/" rel="tag">#TabView</a>
+          
+            <a href="/tags/iOS学习笔记/" rel="tag">#iOS学习笔记</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/21/markdown 语法学习笔记/" rel="next" title="markdown 语法学习笔记">
+                <i class="fa fa-chevron-left"></i> markdown 语法学习笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/03/OCTabView/"
+           data-title="自定义TabView的实现方法" data-url="http://luehningeek.com/index/2016/03/03/OCTabView/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.png" alt="吕宁" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">吕宁</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u57FA_u672C_u8FC7_u7A0B"><span class="nav-number">1.</span> <span class="nav-text">基本过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8BE6_u7EC6_u4EE3_u7801"><span class="nav-number">2.</span> <span class="nav-text">详细代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6700_u7EC8_u7ED3_u679C"><span class="nav-number">3.</span> <span class="nav-text">最终结果</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吕宁</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io"rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"luehning"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+</body>
+</html>
