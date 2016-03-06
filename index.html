@@ -806,6 +806,118 @@
             
               
                 
+                <a class="post-title-link" href="/2015/03/06/OCnineGrid/" itemprop="url">
+                  OCnineGrid using Category
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-03-06T15:41:32+08:00" content="2015-03-06">
+              2015-03-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/03/06/OCnineGrid/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/06/OCnineGrid/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="u4EC0_u4E48_u662F_u5206_u7C7B"><a href="#u4EC0_u4E48_u662F_u5206_u7C7B" class="headerlink" title="什么是分类"></a>什么是分类</h2><p>刚刚弄懂了分类的思想，就迫不及待的用分类写点东西。因为分类简直太好用了。<br>Category,天朝管它叫分类；通过给一个类添加方法来扩充它（但是通过category不能添加新的实例变量），且不需要访问类中的代码，这点和javascript中使用原型来定义属性有点类似。</p>
+<h2 id="u5206_u7C7B_u5B9E_u73B0_u4E5D_u5BAB_u683C"><a href="#u5206_u7C7B_u5B9E_u73B0_u4E5D_u5BAB_u683C" class="headerlink" title="分类实现九宫格"></a>分类实现九宫格</h2><p>现在的很多APP都有九宫格，那么怎么添加九宫格呢？每次都要写那么一长串的代码么？<br>首先创建一个分类，咋创建？<br>其实跟普通创建oc代码一样，选择Objective-C File<br><img src="http://ww1.sinaimg.cn/mw690/c0629545jw1f1n750p1a4j20jz0e1jtq.jpg" alt=""><br>只是在类型中选择category即可。<br><img src="http://ww1.sinaimg.cn/mw690/c0629545jw1f1n74lg7aqj20ey05sglv.jpg" alt=""><br>下面是九宫格的分类代码  </p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"UIViewController+nineGrid.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">UIViewController</span> (<span class="title">nineGrid</span>)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)nineGridWithCol:(<span class="keyword">int</span>)myCol WithGridCount:(<span class="keyword">int</span>)count WithgridWidth:(<span class="built_in">CGFloat</span>)gridWidth WithgridHeight:(<span class="built_in">CGFloat</span>)gridHeight WithMarginToTop:(<span class="built_in">CGFloat</span>)marginTop</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//设置每行的 格子数</span></span><br><span class="line">    <span class="keyword">int</span> columns = myCol;</span><br><span class="line">    <span class="comment">//获取控制器所管理的view的宽度</span></span><br><span class="line">    <span class="built_in">CGFloat</span> viewWidth = <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">CGFloat</span> marginX = (viewWidth - columns*gridWidth)/(columns + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">CGFloat</span> marginY = marginX; <span class="comment">//假设每行之间的间距与marginX 相等</span></span><br><span class="line">    </span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;count; i++) &#123;</span><br><span class="line">        <span class="comment">//1.创建view</span></span><br><span class="line">        <span class="built_in">UIView</span> *appView = [[<span class="built_in">UIView</span> alloc] init];</span><br><span class="line">        <span class="comment">//2.设置AppView的属性</span></span><br><span class="line">        <span class="comment">//2.1 设置AppView的背景颜色</span></span><br><span class="line">        appView<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> grayColor];</span><br><span class="line">        <span class="comment">//计算每个单元格的列的索引</span></span><br><span class="line">        <span class="keyword">int</span> colIdx = i % columns;</span><br><span class="line">        <span class="comment">//计算行索引</span></span><br><span class="line">        <span class="keyword">int</span> rowIdx = i / columns;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">CGFloat</span> gridX = marginX + colIdx * (gridWidth + marginX);</span><br><span class="line">        <span class="built_in">CGFloat</span> gridY = marginTop + rowIdx * (gridHeight + marginY);</span><br><span class="line">        appView<span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(gridX, gridY, gridWidth, gridHeight);</span><br><span class="line">        [<span class="keyword">self</span><span class="variable">.view</span> addSubview:appView];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)nineGridWithCol:(<span class="keyword">int</span>)myCol WithGridCount:(<span class="keyword">int</span>)count WithgridWidth:(<span class="built_in">CGFloat</span>)gridWidth WithgridHeight:(<span class="built_in">CGFloat</span>)gridHeight WithMarginToTop:(<span class="built_in">CGFloat</span>)marginTop WithMarginX:(<span class="built_in">CGFloat</span>)marginX WithMarginY:(<span class="built_in">CGFloat</span>)marginY</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//设置每行的 格子数</span></span><br><span class="line">    <span class="keyword">int</span> columns = myCol;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;count; i++) &#123;</span><br><span class="line">        <span class="comment">//1.创建view</span></span><br><span class="line">        <span class="built_in">UIView</span> *appView = [[<span class="built_in">UIView</span> alloc] init];</span><br><span class="line">        <span class="comment">//2.设置AppView的属性</span></span><br><span class="line">        <span class="comment">//2.1 设置AppView的背景颜色</span></span><br><span class="line">        appView<span class="variable">.backgroundColor</span> = [<span class="built_in">UIColor</span> grayColor];</span><br><span class="line">        <span class="comment">//计算每个单元格的列的索引</span></span><br><span class="line">        <span class="keyword">int</span> colIdx = i % columns;</span><br><span class="line">        <span class="comment">//计算行索引</span></span><br><span class="line">        <span class="keyword">int</span> rowIdx = i / columns;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">CGFloat</span> gridX = marginX + colIdx * (gridWidth + marginX);</span><br><span class="line">        <span class="built_in">CGFloat</span> gridY = marginTop + rowIdx * (gridHeight + marginY);</span><br><span class="line">        appView<span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(gridX, gridY, gridWidth, gridHeight);</span><br><span class="line">        [<span class="keyword">self</span><span class="variable">.view</span> addSubview:appView];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>已经写好了，那么怎么用呢？见证奇迹的时刻到了。首先导入刚刚创建的分类文件。</p>
+<pre><code>#import &quot;UIViewController+nineGrid.h&quot;
+</code></pre><p>当敲 nineGrid时就会有代码提示了，超级牛掰。。。<br><img src="http://ww1.sinaimg.cn/mw690/c0629545jw1f1n7bgm3nuj20ns033jt3.jpg" alt=""></p>
+<h2 id="u6548_u679C_u5C55_u793A"><a href="#u6548_u679C_u5C55_u793A" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="http://ww3.sinaimg.cn/mw690/c0629545jw1f1n7dsoqsmj20hm0itmxf.jpg" alt=""></p>
+<p>以后一定大量使用 分类，真是提高效率的利器啊。  </p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/12/24/OCAnimationAndMusicWithSnowforChrismas/" itemprop="url">
                   OCAnimationAndMusicWithSnowforChrismas
                 </a>
@@ -1228,119 +1340,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/03/05/macShowHiddenFiles/" itemprop="url">
-                  苹果电脑显示隐藏文件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2014-03-05T13:26:00+08:00" content="2014-03-05">
-              2014-03-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MacOS/" itemprop="url" rel="index">
-                    <span itemprop="name">MacOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2014/03/05/macShowHiddenFiles/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/03/05/macShowHiddenFiles/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？</p>
-<h2 id="u9690_u85CF_u7684_u539F_u7406"><a href="#u9690_u85CF_u7684_u539F_u7406" class="headerlink" title="隐藏的原理"></a>隐藏的原理</h2><p>首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 <code>.plist</code> 文件。其实在MacOS中，也大量的使用了这种方法。  </p>
-<p><img src="http://ww2.sinaimg.cn/large/c0629545jw1f1lxgk837fj20in0aewi8.jpg" alt=""></p>
-<p>既然隐藏不隐藏，文件都是在find中，那么从面向对象编程的逻辑来说，说最了解该属性，就把该属性定义给谁。所以可想而知，隐藏功能一定是在find中起作用。一定有个叫find什么什么的文件，并在其中可以设置隐藏或不隐藏。所以就找到了上图的文件，打开一看，果不其然，有如下图所示的属性。</p>
-<p><img src="http://ww2.sinaimg.cn/large/c0629545jw1f1lxfnbocjj20ee05emys.jpg" alt=""><br>该属性是个 BOOL 类型的值，NO 和 YES 两种。对应了隐藏和不隐藏两种效果。说了这么多，你想必也弄明白了，要想显示就把它改成YES，否则改成NO。</p>
-<h2 id="u547D_u4EE4_u884C_u65B9_u6CD5"><a href="#u547D_u4EE4_u884C_u65B9_u6CD5" class="headerlink" title="命令行方法"></a>命令行方法</h2><p>其实采用命令行来实现也是很简单的。当然前提是你能记住这么一长串的命令。。。</p>
-<p><code>defaults write com.apple.finder AppleShowAllFiles -bool true</code>  </p>
-<p><code>defaults write com.apple.finder AppleShowAllFiles -bool false</code></p>
-<p>看了上面那么多的解释，你也许会发现，这个命令的含义。<code>defaults</code>是默认，然后往<code>com.apple.finder</code>文件里的<code>AppleShowAllFiles</code>写一个<code>true</code>或<code>false</code>。其实就是上面说的那个<code>.plist</code>文件里的那个属性啦。</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1387,7 +1386,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1401,7 +1400,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

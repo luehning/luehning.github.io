@@ -270,6 +270,119 @@
             
               
                 
+                <a class="post-title-link" href="/2014/03/05/macShowHiddenFiles/" itemprop="url">
+                  苹果电脑显示隐藏文件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2014-03-05T13:26:00+08:00" content="2014-03-05">
+              2014-03-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MacOS/" itemprop="url" rel="index">
+                    <span itemprop="name">MacOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/03/05/macShowHiddenFiles/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/03/05/macShowHiddenFiles/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>Mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？</p>
+<h2 id="u9690_u85CF_u7684_u539F_u7406"><a href="#u9690_u85CF_u7684_u539F_u7406" class="headerlink" title="隐藏的原理"></a>隐藏的原理</h2><p>首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 <code>.plist</code> 文件。其实在MacOS中，也大量的使用了这种方法。  </p>
+<p><img src="http://ww2.sinaimg.cn/large/c0629545jw1f1lxgk837fj20in0aewi8.jpg" alt=""></p>
+<p>既然隐藏不隐藏，文件都是在find中，那么从面向对象编程的逻辑来说，说最了解该属性，就把该属性定义给谁。所以可想而知，隐藏功能一定是在find中起作用。一定有个叫find什么什么的文件，并在其中可以设置隐藏或不隐藏。所以就找到了上图的文件，打开一看，果不其然，有如下图所示的属性。</p>
+<p><img src="http://ww2.sinaimg.cn/large/c0629545jw1f1lxfnbocjj20ee05emys.jpg" alt=""><br>该属性是个 BOOL 类型的值，NO 和 YES 两种。对应了隐藏和不隐藏两种效果。说了这么多，你想必也弄明白了，要想显示就把它改成YES，否则改成NO。</p>
+<h2 id="u547D_u4EE4_u884C_u65B9_u6CD5"><a href="#u547D_u4EE4_u884C_u65B9_u6CD5" class="headerlink" title="命令行方法"></a>命令行方法</h2><p>其实采用命令行来实现也是很简单的。当然前提是你能记住这么一长串的命令。。。</p>
+<p><code>defaults write com.apple.finder AppleShowAllFiles -bool true</code>  </p>
+<p><code>defaults write com.apple.finder AppleShowAllFiles -bool false</code></p>
+<p>看了上面那么多的解释，你也许会发现，这个命令的含义。<code>defaults</code>是默认，然后往<code>com.apple.finder</code>文件里的<code>AppleShowAllFiles</code>写一个<code>true</code>或<code>false</code>。其实就是上面说的那个<code>.plist</code>文件里的那个属性啦。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/03/01/Agile/" itemprop="url">
                   Agile 101 Scrum 和 XP的那些事
                 </a>
@@ -616,7 +729,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -630,7 +743,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
