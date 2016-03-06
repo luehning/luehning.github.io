@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="macOS," />
+  <meta name="keywords" content="MacOS," />
 
 
 
@@ -51,25 +51,25 @@
 
 
 
-<meta name="description" content="mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？
-隐藏的原理首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 .plist 文件。其实在macOS中，也大量的使用了这种方法。  
+<meta name="description" content="Mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？
+隐藏的原理首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 .plist 文件。其实在MacOS中，也大量的使用了这种方法。  
 
 既然隐藏不隐藏，文件都是在find中，那么从面向对象编程的逻辑来说，说最了解该属性，就把该属性定义给谁。所以可想而知，隐藏功能一定是在find">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS 显示隐藏文件">
 <meta property="og:url" content="http://luehningeek.com/index/2014/03/05/macShowHiddenFiles/index.html">
 <meta property="og:site_name" content="吕宁的博客">
-<meta property="og:description" content="mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？
-隐藏的原理首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 .plist 文件。其实在macOS中，也大量的使用了这种方法。  
+<meta property="og:description" content="Mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？
+隐藏的原理首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 .plist 文件。其实在MacOS中，也大量的使用了这种方法。  
 
 既然隐藏不隐藏，文件都是在find中，那么从面向对象编程的逻辑来说，说最了解该属性，就把该属性定义给谁。所以可想而知，隐藏功能一定是在find">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/c0629545jw1f1lxgk837fj20in0aewi8.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/c0629545jw1f1lxfnbocjj20ee05emys.jpg">
-<meta property="og:updated_time" content="2016-03-05T06:01:56.000Z">
+<meta property="og:updated_time" content="2016-03-06T05:36:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS 显示隐藏文件">
-<meta name="twitter:description" content="mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？
-隐藏的原理首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 .plist 文件。其实在macOS中，也大量的使用了这种方法。  
+<meta name="twitter:description" content="Mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？
+隐藏的原理首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 .plist 文件。其实在MacOS中，也大量的使用了这种方法。  
 
 既然隐藏不隐藏，文件都是在find中，那么从面向对象编程的逻辑来说，说最了解该属性，就把该属性定义给谁。所以可想而知，隐藏功能一定是在find">
 
@@ -292,8 +292,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/macOS/" itemprop="url" rel="index">
-                    <span itemprop="name">macOS</span>
+                  <a href="/categories/MacOS/" itemprop="url" rel="index">
+                    <span itemprop="name">MacOS</span>
                   </a>
                 </span>
 
@@ -332,8 +332,8 @@
       
 
       
-        <span itemprop="articleBody"><p>mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？</p>
-<h2 id="u9690_u85CF_u7684_u539F_u7406"><a href="#u9690_u85CF_u7684_u539F_u7406" class="headerlink" title="隐藏的原理"></a>隐藏的原理</h2><p>首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 <code>.plist</code> 文件。其实在macOS中，也大量的使用了这种方法。  </p>
+        <span itemprop="articleBody"><p>Mac 系统中是默认隐藏了隐藏文件和文件夹的，那么如何显示它们呢？</p>
+<h2 id="u9690_u85CF_u7684_u539F_u7406"><a href="#u9690_u85CF_u7684_u539F_u7406" class="headerlink" title="隐藏的原理"></a>隐藏的原理</h2><p>首先我们要知道隐藏的功能是在哪里起作用的。iOS的程序猿们都知道，在iOS下保存文件的方式之一就是可以使用 <code>.plist</code> 文件。其实在MacOS中，也大量的使用了这种方法。  </p>
 <p><img src="http://ww2.sinaimg.cn/large/c0629545jw1f1lxgk837fj20in0aewi8.jpg" alt=""></p>
 <p>既然隐藏不隐藏，文件都是在find中，那么从面向对象编程的逻辑来说，说最了解该属性，就把该属性定义给谁。所以可想而知，隐藏功能一定是在find中起作用。一定有个叫find什么什么的文件，并在其中可以设置隐藏或不隐藏。所以就找到了上图的文件，打开一看，果不其然，有如下图所示的属性。</p>
 <p><img src="http://ww2.sinaimg.cn/large/c0629545jw1f1lxfnbocjj20ee05emys.jpg" alt=""><br>该属性是个 BOOL 类型的值，NO 和 YES 两种。对应了隐藏和不隐藏两种效果。说了这么多，你想必也弄明白了，要想显示就把它改成YES，否则改成NO。</p>
@@ -349,7 +349,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/macOS/" rel="tag">#macOS</a>
+            <a href="/tags/MacOS/" rel="tag">#MacOS</a>
           
         </div>
       

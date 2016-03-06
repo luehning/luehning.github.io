@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://luehningeek.com/index/2014/03/05/macShowHiddenFiles/</loc>
+    <lastmod>2016-03-06T05:36:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>macOS 显示隐藏文件</title>
+        <pubTime>2014-03-05T05:26:00.000Z</pubTime>
+        
+        <tag>MacOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="MacOS" url="http://luehningeek.com/index/categories/MacOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://luehningeek.com/index/2015/12/20/mac001-ThreeFingerDrag/</loc>
+    <lastmod>2016-03-06T05:35:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>macbook三指拖拽开启方法</title>
+        <pubTime>2015-12-20T08:17:13.000Z</pubTime>
+        
+        <tag>MacOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="MacOS" url="http://luehningeek.com/index/categories/MacOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://luehningeek.com/index/2015/07/03/OCTabView/</loc>
     <lastmod>2016-03-06T05:31:24.000Z</lastmod>
     <data>
@@ -63,46 +103,6 @@
            
              
               <breadCrumb title="iOS" url="http://luehningeek.com/index/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://luehningeek.com/index/2015/12/20/mac001-ThreeFingerDrag/</loc>
-    <lastmod>2016-03-05T06:05:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>macbook三指拖拽开启方法</title>
-        <pubTime>2015-12-20T08:17:13.000Z</pubTime>
-        
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="macOS" url="http://luehningeek.com/index/categories/macOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://luehningeek.com/index/2014/03/05/macShowHiddenFiles/</loc>
-    <lastmod>2016-03-05T06:01:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>macOS 显示隐藏文件</title>
-        <pubTime>2014-03-05T05:26:00.000Z</pubTime>
-        
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="macOS" url="http://luehningeek.com/index/categories/macOS/"/>
           
         </display>
     </data>
