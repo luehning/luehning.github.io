@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://luehningeek.com/index/2015/07/03/OCTabView/</loc>
-    <lastmod>2016-03-05T15:43:22.000Z</lastmod>
+    <lastmod>2016-03-06T05:31:24.000Z</lastmod>
     <data>
         <display>
         <title>自定义TabView的实现方法</title>
@@ -14,6 +14,30 @@
         <tag>TabView</tag>
          
         <tag>iOS学习笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://luehningeek.com/index/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://luehningeek.com/index/2014/12/24/OCAnimationAndMusicWithSnowforChrismas/</loc>
+    <lastmod>2016-03-06T05:31:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>OCAnimationAndMusicWithSnowforChrismas</title>
+        <pubTime>2014-12-24T15:59:41.000Z</pubTime>
+        
+        <tag>Animaton</tag>
+         
+        <tag>iOS学习笔记</tag>
+         
+        <tag>music</tag>
          
          
            
